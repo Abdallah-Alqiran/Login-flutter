@@ -99,14 +99,26 @@ class _MyAppState extends State<MyApp> {
                   ),
                   SizedBox(height: 16),
 
-                  TextButton(child: Text("Forgot password?", style: TextStyle(color: Color(0xFF40BFFF),)), onPressed:() {} ,),
+                  TextButton(
+                    child: Text(
+                      "Forgot password?",
+                      style: TextStyle(color: Color(0xFF40BFFF)),
+                    ),
+                    onPressed: () {},
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Don't have an account?"),
-                      TextButton(child: Text("Register", style: TextStyle(color: Color(0xFF40BFFF), ), ), onPressed: () {},)
+                      TextButton(
+                        child: Text(
+                          "Register",
+                          style: TextStyle(color: Color(0xFF40BFFF)),
+                        ),
+                        onPressed: () {},
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -160,9 +172,11 @@ class DefaultButton extends StatelessWidget {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset(assets, width: 25, height: 25),
             Text(text),
+            SizedBox()
           ],
         ),
       ),
